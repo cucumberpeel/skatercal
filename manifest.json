@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "SkaterCal",
+    "version": "1.0",
+    "description": "Extracts competition dates from US Figure Skating EMS and creates .ics files for download",
+    "permissions": ["activeTab", "scripting"],
+    "host_permissions": ["https://m.usfigureskating.org/my-competitions/"],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "icon.png"
+    },
+    "content_scripts": [
+        {
+        "matches": ["https://m.usfigureskating.org/my-competitions/"],
+        "js": ["content.js"]
+        }
+    ]
+}
